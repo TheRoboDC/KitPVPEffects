@@ -18,8 +18,8 @@ public class EffectsListener implements Listener {
 	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onThrow(PlayerDropItemEvent event) {
-		World world = ((Player) event).getWorld();
 		Player player = event.getPlayer();
+		World world = player.getWorld();
 		Item drop = event.getItemDrop();
 		Location loc = ((Player) event).getLocation();
 		if(drop.getItemStack().getTypeId() == 46) {
