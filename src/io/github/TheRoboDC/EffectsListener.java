@@ -21,7 +21,7 @@ public class EffectsListener implements Listener {
 		Player player = event.getPlayer();
 		World world = player.getWorld();
 		Item drop = event.getItemDrop();
-		Location loc = ((Player) event).getLocation();
+		Location loc = player.getLocation();
 		if(drop.getItemStack().getTypeId() == 46) {
 			player.sendMessage(ChatColor.GREEN + "You threw a grenade!");
 			world.createExplosion(loc, 0.0F);
